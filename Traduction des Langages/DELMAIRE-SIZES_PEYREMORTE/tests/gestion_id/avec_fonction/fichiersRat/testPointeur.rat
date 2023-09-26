@@ -1,0 +1,9 @@
+int fonction (int * p) {
+    return (*p);
+}
+
+test {
+    int * p = (new int);
+    (* p) = 2;
+    int err = call fonction (p);
+}

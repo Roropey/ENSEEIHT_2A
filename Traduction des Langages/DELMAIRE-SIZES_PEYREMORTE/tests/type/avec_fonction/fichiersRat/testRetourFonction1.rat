@@ -1,0 +1,8 @@
+int add (int x int y){
+  return (x+y);
+}
+
+
+test{
+  int x = 4;
+}

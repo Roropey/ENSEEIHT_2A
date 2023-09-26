@@ -1,0 +1,4 @@
+test{
+  bool x = true;
+  x = false;
+}

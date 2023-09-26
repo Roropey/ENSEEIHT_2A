@@ -1,0 +1,14 @@
+main{
+    int c = 0;
+    loop {
+        c = (c+1);
+        if (c=3){
+            print 666;
+            continue;
+        }
+        print c;
+        if (c=5){
+            break;
+        }
+    }
+}

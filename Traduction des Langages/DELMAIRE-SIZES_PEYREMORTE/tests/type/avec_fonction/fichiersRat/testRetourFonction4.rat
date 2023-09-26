@@ -1,0 +1,11 @@
+int add1 (int x int y){
+  int z = (x+y);
+  while (true) {
+    return false;
+  }
+}
+
+
+test{
+  int x = call add1 (3 4);
+}

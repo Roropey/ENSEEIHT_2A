@@ -1,0 +1,4 @@
+test{
+  bool x = true;
+  rat y = x;
+}

@@ -1,0 +1,2 @@
+(** @canonical Be.Util *)
+module Util = Be__Util

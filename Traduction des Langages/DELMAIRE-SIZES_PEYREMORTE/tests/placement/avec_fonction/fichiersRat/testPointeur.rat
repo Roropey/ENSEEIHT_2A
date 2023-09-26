@@ -1,0 +1,7 @@
+int f (int* p rat r) {
+    return (*p);
+}
+
+
+main {
+}

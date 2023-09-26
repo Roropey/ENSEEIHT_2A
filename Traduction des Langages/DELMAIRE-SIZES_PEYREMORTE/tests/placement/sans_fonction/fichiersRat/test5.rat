@@ -1,0 +1,5 @@
+main {
+    bool x = true;
+    rat y = [0/1];
+    int z = 0;
+}

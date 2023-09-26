@@ -1,0 +1,8 @@
+main {
+    int x = 3;
+    int y = 2;
+    loop {
+        int x = 1;
+        print(x);
+    }
+}

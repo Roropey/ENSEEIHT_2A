@@ -1,0 +1,26 @@
+(** @canonical Be.Assocmem *)
+module Assocmem = Be__Assocmem
+
+
+(** @canonical Be.Btree *)
+module Btree = Be__Btree
+
+
+(** @canonical Be.Listmem *)
+module Listmem = Be__Listmem
+
+
+(** @canonical Be.Mem *)
+module Mem = Be__Mem
+
+
+(** @canonical Be.Test *)
+module Test = Be__Test
+
+
+(** @canonical Be.Treemem *)
+module Treemem = Be__Treemem
+
+
+(** @canonical Be.Util *)
+module Util = Be__Util

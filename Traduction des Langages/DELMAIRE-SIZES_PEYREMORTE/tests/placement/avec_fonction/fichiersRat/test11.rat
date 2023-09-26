@@ -1,0 +1,7 @@
+bool f (bool a) {
+    return a;
+}
+
+
+main {
+}

@@ -1,0 +1,6 @@
+test{
+  int x = 3;
+  while x {
+    int x = 3;
+  } 
+}

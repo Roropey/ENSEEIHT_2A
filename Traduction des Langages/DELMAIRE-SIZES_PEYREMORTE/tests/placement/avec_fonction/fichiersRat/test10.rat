@@ -1,0 +1,7 @@
+rat f (rat a) {
+    return a;
+}
+
+
+main {
+}

@@ -1,0 +1,85 @@
+#!/bin/bash -e
+
+strategie="$1"
+
+if [ "$strategie" = "" ]; then
+    echo "$0 nom-nouvelle-strategie"
+    exit 2
+fi
+
+# fichier tout en miniscule, Ada avec une majuscule au début
+nomfic=`echo "$strategie" | tr '[:upper:]' '[:lower:]'`
+nomada=`echo ${strategie:0:1} | tr '[a-z]' '[A-Z]'`${strategie:1}
+
+if ! expr "$nomada" : '[A-Z][A-Za-z0-9_]*' >/dev/null; then
+    echo "Le nom de la stratégie doit être un identifiant Ada valide."
+    exit 1
+fi
+
+if [ -f "lr-synchro-$nomfic.ads" ]; then
+    echo "lr-synchro-$nomfic.ads existe déjà."
+    exit 1
+fi
+if [ -f "lr-synchro-$nomfic.adb" ]; then
+    echo "lr-synchro-$nomfic.adb existe déjà."
+    exit 1
+fi
+
+cat >"lr-synchro-$nomfic.ads" <<EOF
+package LR.Synchro.$nomada is
+   function Nom_Strategie return String;
+   procedure Demander_Lecture;
+   procedure Demander_Ecriture;
+   procedure Terminer_Lecture;
+   procedure Terminer_Ecriture;
+end LR.Synchro.$nomada;
+EOF
+
+cat >"lr-synchro-$nomfic.adb" <<EOF
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Exceptions;
+
+package body LR.Synchro.$nomada is
+   
+   function Nom_Strategie return String is
+   begin
+      return "$strategie";
+   end Nom_Strategie;
+
+   task LectRedTask is
+      entry Demander_Lecture;
+      entry Demander_Ecriture;
+      entry Terminer_Lecture;
+      entry Terminer_Ecriture;
+   end LectRedTask;
+
+   task body LectRedTask is
+   begin
+       -- XXXX TODO XXXX
+   end LectRedTask;
+
+   procedure Demander_Lecture is
+   begin
+      LectRedTask.Demander_Lecture;
+   end Demander_Lecture;
+
+   procedure Demander_Ecriture is
+   begin
+      LectRedTask.Demander_Ecriture;
+   end Demander_Ecriture;
+
+   procedure Terminer_Lecture is
+   begin
+      LectRedTask.Terminer_Lecture;
+   end Terminer_Lecture;
+
+   procedure Terminer_Ecriture is
+   begin
+      LectRedTask.Terminer_Ecriture;
+   end Terminer_Ecriture;
+
+end LR.Synchro.$nomada;
+EOF
+
+echo "lr-synchro-$nomfic.ads et lr-synchro-$nomfic.adb créés."
+echo "Penser à mettre à jour lr-synchro.adb pour sélectionner la stratégie."

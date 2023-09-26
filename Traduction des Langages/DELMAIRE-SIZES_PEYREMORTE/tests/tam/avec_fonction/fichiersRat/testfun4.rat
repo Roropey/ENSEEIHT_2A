@@ -1,0 +1,9 @@
+int f (int a int b){
+  return (a+b);
+}
+
+test{
+  int c = (3+4);
+  int d = 3;
+  print call f (c d);
+}

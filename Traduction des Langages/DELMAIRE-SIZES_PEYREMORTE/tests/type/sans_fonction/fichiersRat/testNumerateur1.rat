@@ -1,0 +1,3 @@
+test{
+  int x = num [3/4];
+}

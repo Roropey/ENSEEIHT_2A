@@ -1,0 +1,7 @@
+  (* Type pour représenter les expressions binaires *)
+  type op = Moins | Plus | Mult | Div
+  type exp = Binaire of exp * op * exp | Entier of int
+
+  (* eval *)
+  let eval =  fun _ -> assert false
+(* Tests : TO DO *)

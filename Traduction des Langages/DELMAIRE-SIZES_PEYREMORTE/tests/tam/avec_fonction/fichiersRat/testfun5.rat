@@ -1,0 +1,8 @@
+int f1 (int i){
+ int x = i;
+}
+
+test{
+  int x = call f1 (13);
+  print x;
+}

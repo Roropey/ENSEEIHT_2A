@@ -1,0 +1,198 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: "/home/romai/Enseeiht/S7/Traduction des
+# Langages/TP1/B-M/sourcesEtu"
+# Auto-detected concurrency: 16
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_d7a42c_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/romai/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/usr/bin"
+#  ; ocaml = Ok External "/home/romai/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/usr/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/usr/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/usr/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/usr/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/romai/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/usr/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/home/romai/Enseeiht/S7/Traduction des Langages/TP1/B-M/sourcesEtu"
+#        ; "INSIDE_DUNE" :
+#            "/home/romai/Enseeiht/S7/Traduction des Langages/TP1/B-M/sourcesEtu/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/romai/Enseeiht/S7/Traduction des Langages/TP1/B-M/sourcesEtu/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/romai/Enseeiht/S7/Traduction des Langages/TP1/B-M/sourcesEtu/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/romai/Enseeiht/S7/Traduction des Langages/TP1/B-M/sourcesEtu/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/romai/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.13.1"
+#      ; standard_library_default = "/usr/lib/ocaml"
+#      ; standard_library = "/usr/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "x86_64-linux-gnu-gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ]
+#      ; ocamlc_cppflags =
+#          [ "-D_FILE_OFFSET_BITS=64"; "-Wdate-time"; "-D_FORTIFY_SOURCE=2" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ]
+#      ; ocamlopt_cppflags =
+#          [ "-D_FILE_OFFSET_BITS=64"; "-Wdate-time"; "-D_FORTIFY_SOURCE=2" ]
+#      ; bytecomp_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-Wdate-time"
+#          ; "-D_FORTIFY_SOURCE=2"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-Wdate-time"
+#          ; "-D_FORTIFY_SOURCE=2"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "x86_64-linux-gnu-ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "x86_64-linux-gnu-as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X030"
+#      ; cmi_magic_number = "Caml1999I030"
+#      ; cmo_magic_number = "Caml1999O030"
+#      ; cma_magic_number = "Caml1999A030"
+#      ; cmx_magic_number = "Caml1999Y030"
+#      ; cmxa_magic_number = "Caml1999Z030"
+#      ; ast_impl_magic_number = "Caml1999M030"
+#      ; ast_intf_magic_number = "Caml1999N030"
+#      ; cmxs_magic_number = "Caml1999D030"
+#      ; cmt_magic_number = "Caml1999T030"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="miniML"' -o Semantics.pp.ml --impl Semantics.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl Semantics.pp.ml) > _build/default/.miniML.objs/Semantics.pp.ml.d
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .miniML.objs/byte -I /home/romai/.opam/default/lib/base -I /home/romai/.opam/default/lib/base/base_internalhash_types -I /home/romai/.opam/default/lib/base/caml -I /home/romai/.opam/default/lib/base/shadow_stdlib -I /home/romai/.opam/default/lib/jane-street-headers -I /home/romai/.opam/default/lib/ppx_compare/runtime-lib -I /home/romai/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/romai/.opam/default/lib/ppx_hash/runtime-lib -I /home/romai/.opam/default/lib/ppx_inline_test/config -I /home/romai/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/romai/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/romai/.opam/default/lib/sexplib0 -I /home/romai/.opam/default/lib/time_now -no-alias-deps -opaque -open MiniML -o .miniML.objs/byte/miniML__Semantics.cmo -c -impl Semantics.pp.ml)
+> File "Semantics.ml", line 198, characters 19-22:
+> 198 | and ruleCallByName env fexpr pexpr =
+>                          ^^^
+> Warning 27 [unused-var-strict]: unused variable env.
+> File "Semantics.ml", line 198, characters 23-28:
+> 198 | and ruleCallByName env fexpr pexpr =
+>                              ^^^^^
+> Warning 27 [unused-var-strict]: unused variable fexpr.
+> File "Semantics.ml", line 198, characters 29-34:
+> 198 | and ruleCallByName env fexpr pexpr =
+>                                    ^^^^^
+> Warning 27 [unused-var-strict]: unused variable pexpr.
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .miniML.objs/byte -I /home/romai/.opam/default/lib/base -I /home/romai/.opam/default/lib/base/base_internalhash_types -I /home/romai/.opam/default/lib/base/caml -I /home/romai/.opam/default/lib/base/shadow_stdlib -I /home/romai/.opam/default/lib/jane-street-headers -I /home/romai/.opam/default/lib/ppx_compare/runtime-lib -I /home/romai/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/romai/.opam/default/lib/ppx_hash/runtime-lib -I /home/romai/.opam/default/lib/ppx_inline_test/config -I /home/romai/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/romai/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/romai/.opam/default/lib/sexplib0 -I /home/romai/.opam/default/lib/time_now -no-alias-deps -opaque -open MiniML -o .miniML.objs/byte/miniML__Main.cmo -c -impl Main.pp.ml)
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -w -24 -g -g -bin-annot -I .miniML.inline-tests/.miniML.inline-tests.eobjs/byte -I /home/romai/.opam/default/lib/base -I /home/romai/.opam/default/lib/base/base_internalhash_types -I /home/romai/.opam/default/lib/base/caml -I /home/romai/.opam/default/lib/base/shadow_stdlib -I /home/romai/.opam/default/lib/jane-street-headers -I /home/romai/.opam/default/lib/ppx_compare/runtime-lib -I /home/romai/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/romai/.opam/default/lib/ppx_hash/runtime-lib -I /home/romai/.opam/default/lib/ppx_inline_test/config -I /home/romai/.opam/default/lib/ppx_inline_test/runner/lib -I /home/romai/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/romai/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/romai/.opam/default/lib/sexplib0 -I /home/romai/.opam/default/lib/time_now -I .miniML.objs/byte -no-alias-deps -o .miniML.inline-tests/.miniML.inline-tests.eobjs/byte/dune__exe__Inline_test_runner_miniML.cmo -c -impl .miniML.inline-tests/inline_test_runner_miniML.ml-gen)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .miniML.objs/byte -I .miniML.objs/native -I /home/romai/.opam/default/lib/base -I /home/romai/.opam/default/lib/base/base_internalhash_types -I /home/romai/.opam/default/lib/base/caml -I /home/romai/.opam/default/lib/base/shadow_stdlib -I /home/romai/.opam/default/lib/jane-street-headers -I /home/romai/.opam/default/lib/ppx_compare/runtime-lib -I /home/romai/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/romai/.opam/default/lib/ppx_hash/runtime-lib -I /home/romai/.opam/default/lib/ppx_inline_test/config -I /home/romai/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/romai/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/romai/.opam/default/lib/sexplib0 -I /home/romai/.opam/default/lib/time_now -intf-suffix .ml -no-alias-deps -opaque -open MiniML -o .miniML.objs/native/miniML__Semantics.cmx -c -impl Semantics.pp.ml)
+> File "Semantics.ml", line 198, characters 19-22:
+> 198 | and ruleCallByName env fexpr pexpr =
+>                          ^^^
+> Warning 27 [unused-var-strict]: unused variable env.
+> File "Semantics.ml", line 198, characters 23-28:
+> 198 | and ruleCallByName env fexpr pexpr =
+>                              ^^^^^
+> Warning 27 [unused-var-strict]: unused variable fexpr.
+> File "Semantics.ml", line 198, characters 29-34:
+> 198 | and ruleCallByName env fexpr pexpr =
+>                                    ^^^^^
+> Warning 27 [unused-var-strict]: unused variable pexpr.
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .miniML.objs/byte -I .miniML.objs/native -I /home/romai/.opam/default/lib/base -I /home/romai/.opam/default/lib/base/base_internalhash_types -I /home/romai/.opam/default/lib/base/caml -I /home/romai/.opam/default/lib/base/shadow_stdlib -I /home/romai/.opam/default/lib/jane-street-headers -I /home/romai/.opam/default/lib/ppx_compare/runtime-lib -I /home/romai/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/romai/.opam/default/lib/ppx_hash/runtime-lib -I /home/romai/.opam/default/lib/ppx_inline_test/config -I /home/romai/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/romai/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/romai/.opam/default/lib/sexplib0 -I /home/romai/.opam/default/lib/time_now -intf-suffix .ml -no-alias-deps -opaque -open MiniML -o .miniML.objs/native/miniML__Main.cmx -c -impl Main.pp.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -w -24 -g -g -I .miniML.inline-tests/.miniML.inline-tests.eobjs/byte -I .miniML.inline-tests/.miniML.inline-tests.eobjs/native -I /home/romai/.opam/default/lib/base -I /home/romai/.opam/default/lib/base/base_internalhash_types -I /home/romai/.opam/default/lib/base/caml -I /home/romai/.opam/default/lib/base/shadow_stdlib -I /home/romai/.opam/default/lib/jane-street-headers -I /home/romai/.opam/default/lib/ppx_compare/runtime-lib -I /home/romai/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/romai/.opam/default/lib/ppx_hash/runtime-lib -I /home/romai/.opam/default/lib/ppx_inline_test/config -I /home/romai/.opam/default/lib/ppx_inline_test/runner/lib -I /home/romai/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/romai/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/romai/.opam/default/lib/sexplib0 -I /home/romai/.opam/default/lib/time_now -I .miniML.objs/byte -I .miniML.objs/native -intf-suffix .ml-gen -no-alias-deps -o .miniML.inline-tests/.miniML.inline-tests.eobjs/native/dune__exe__Inline_test_runner_miniML.cmx -c -impl .miniML.inline-tests/inline_test_runner_miniML.ml-gen)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -a -o miniML.cmxa .miniML.objs/native/miniML.cmx .miniML.objs/native/miniML__Ast.cmx .miniML.objs/native/miniML__Semantics.cmx .miniML.objs/native/miniML__Parser.cmx .miniML.objs/native/miniML__Lexer.cmx .miniML.objs/native/miniML__Main.cmx)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -w -24 -g -g -o .miniML.inline-tests/inline_test_runner_miniML.exe /home/romai/.opam/default/lib/ppx_inline_test/config/inline_test_config.cmxa /home/romai/.opam/default/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/romai/.opam/default/lib/base/base_internalhash_types /home/romai/.opam/default/lib/base/caml/caml.cmxa /home/romai/.opam/default/lib/sexplib0/sexplib0.cmxa /home/romai/.opam/default/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/romai/.opam/default/lib/base/base.cmxa -I /home/romai/.opam/default/lib/base /home/romai/.opam/default/lib/jane-street-headers/jane_street_headers.cmxa /home/romai/.opam/default/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /home/romai/.opam/default/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /home/romai/.opam/default/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /home/romai/.opam/default/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /home/romai/.opam/default/lib/time_now/time_now.cmxa -I /home/romai/.opam/default/lib/time_now /home/romai/.opam/default/lib/ppx_inline_test/runtime-lib/ppx_inline_test_lib.cmxa miniML.cmxa /home/romai/.opam/default/lib/ppx_inline_test/runner/lib/ppx_inline_test_runner_lib.cmxa -I /home/romai/.opam/default/lib/ppx_inline_test/runner/lib .miniML.inline-tests/.miniML.inline-tests.eobjs/native/dune__exe__Inline_test_runner_miniML.cmx -linkall)
+$ (cd _build/default && .miniML.inline-tests/inline_test_runner_miniML.exe inline-test-runner miniML -source-tree-root . -diff-cmd -)
+> File "Main.ml", line 35, characters 0-75: <<(main "../../exemples/exemple-06.mml") = (Int[...]>> is false.
+>
+> File "Main.ml", line 39, characters 0-75: <<(main "../../exemples/exemple-11.mml") = (Int[...]>> is false.
+>
+> File "Main.ml", line 40, characters 0-75: <<(main "../../exemples/exemple-12.mml") = (Int[...]>> is false.
+>
+> FAILED 3 / 12 tests
+[2]

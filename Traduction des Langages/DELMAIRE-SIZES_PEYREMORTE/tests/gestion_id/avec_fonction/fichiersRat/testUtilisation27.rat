@@ -1,0 +1,9 @@
+int add (int x int y){
+  int z = y;
+  return (x+z);
+}
+
+test{
+   int x = 1;
+   print call add (x x);
+}

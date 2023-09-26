@@ -1,0 +1,18 @@
+int add (int a int b){
+  int c = 0;
+  c = (0 + a);
+  return (a+(b+c));}
+
+test{
+  int x = 3;
+  x = 4;
+  const y = 5;
+  int z = (x+y);
+  if(x<0){
+    bool x = true;
+    x = false;
+  }else{
+    rat x = [4/3];
+    int e = call add (num x y);
+  }
+}

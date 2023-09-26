@@ -1,0 +1,10 @@
+int add1 (int x int y){
+  int z = (x+y);
+  return (z+1);
+}
+
+
+test{
+  const z = 3;
+  int x = call add1 ((z+2) (4+6));
+}

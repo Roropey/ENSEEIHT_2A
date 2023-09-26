@@ -1,0 +1,26 @@
+2022-12-14 14:22:04,736 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1817d444: startup date [Wed Dec 14 14:22:04 CET 2022]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2022-12-14 14:22:05,796 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/home/romai/Enseeiht/S7/Intergiciel/sujet-jms/activemq_path/apache-activemq-5.14.0/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:22:06,045 | INFO  | PListStore:[/home/romai/Enseeiht/S7/Intergiciel/sujet-jms/activemq_path/apache-activemq-5.14.0/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2022-12-14 14:22:06,181 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:Portable-Romain-40293-1671024126057-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:22:06,202 | INFO  | Listening for connections at: tcp://Portable-Romain:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-12-14 14:22:06,204 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:22:06,210 | INFO  | Listening for connections at: amqp://Portable-Romain:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-12-14 14:22:06,212 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:22:06,219 | INFO  | Listening for connections at: stomp://Portable-Romain:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-12-14 14:22:06,221 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:22:06,228 | INFO  | Listening for connections at: mqtt://Portable-Romain:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-12-14 14:22:06,230 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:22:06,414 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@412c995d{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2022-12-14 14:22:06,480 | INFO  | Listening for connections at ws://Portable-Romain:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2022-12-14 14:22:06,491 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:22:06,492 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:Portable-Romain-40293-1671024126057-0:1) started | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:22:06,493 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:22:06,997 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2022-12-14 14:22:07,142 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-12-14 14:22:07,143 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-12-14 14:22:07,180 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2022-12-14 14:22:07,426 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2022-12-14 14:22:07,502 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2022-12-14 15:26:07,825 | WARN  | Transport Connection to: tcp://127.0.0.1:60078 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:60078@61616
+2022-12-14 15:33:27,348 | WARN  | Transport Connection to: tcp://127.0.0.1:60096 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:60096@61616
+2022-12-14 15:44:41,066 | WARN  | Transport Connection to: tcp://127.0.0.1:60212 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:60212@61616

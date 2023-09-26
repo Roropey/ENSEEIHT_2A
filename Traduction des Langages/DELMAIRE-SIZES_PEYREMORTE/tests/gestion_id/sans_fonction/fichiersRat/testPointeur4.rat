@@ -1,0 +1,11 @@
+test{
+    int* p = (new int);
+    int** p2 = &p;
+
+    int x = 3;
+    p = &x;
+
+    print (*(*p2));
+
+    
+}

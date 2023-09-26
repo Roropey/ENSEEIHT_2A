@@ -1,0 +1,10 @@
+int plus1 (int a int b){
+  int c = 1;
+  return (a+(b+c));
+}
+
+fonction{
+  int x = 3;
+  int y = 4;
+  print call plus1 (x y);
+}

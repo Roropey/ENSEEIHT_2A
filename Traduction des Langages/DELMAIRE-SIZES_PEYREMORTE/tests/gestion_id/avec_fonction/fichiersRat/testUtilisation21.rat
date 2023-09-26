@@ -1,0 +1,7 @@
+int add (int x int y){
+  return (x+y);
+}
+
+test{
+  int x = call add (1 call add (1 y));
+}

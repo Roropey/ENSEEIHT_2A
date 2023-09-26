@@ -1,0 +1,5 @@
+test{
+  int x = 1;
+  int y = 2;
+  print( (x=1) ? x : y );
+}

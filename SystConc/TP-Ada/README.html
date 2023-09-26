@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="tp-synchronisation-en-ada-lecteursrédacteurs">TP Synchronisation
+en Ada : lecteurs/rédacteurs</h1>
+<h2 id="objectif">Objectif</h2>
+<p>Réaliser une tâche Ada gérant les accès à un fichier partagé, en
+garantissant une cohérence des accès concurrents (accès exclusif pour
+les écritures) et en suivant différentes stratégies de service :</p>
+<ul>
+<li>priorité aux rédacteurs ou aux lecteurs ;</li>
+<li>FIFO ;</li>
+<li>équitable (absence de famine que ce soient des lecteurs ou des
+rédacteurs).</li>
+</ul>
+<h2 id="les-paquetages">Les paquetages</h2>
+<p>LR : vide, pour faire plaisir à gnat<br />
+LR.Affic : tout ce qui concerne l’affichage<br />
+LR.Main : pgm principal<br />
+LR.Simu : simulateur temporel<br />
+LR.Synchro : paquetage de redirection vers la stratégie choisie<br />
+LR.Synchro.Exclusion : implantation par exclusion mutuelle<br />
+LR.Synchro.Exclusion2 : implantation stupide par exclusion
+mutuelle<br />
+LR.Synchro.Basique : 1er exercice, à compléter<br />
+LR.Tasks : les tâches clientes (lecteurs et rédacteurs)</p>
+<p>Les paquetages à consulter et modifier sont
+<code>LR.Synchro.*</code>.</p>
+<p>Le paquetage <code>LR.Tasks</code> contient la définition du
+comportement des lecteurs et des rédacteurs. On peut y changer les
+durées minimales et maximales pour modifier les fréquences relatives des
+lecteurs et des rédacteurs.</p>
+<p>Par curiosité, on peut aussi consulter <code>LR.Main</code> (qui
+lance les tâches) et les interfaces de <code>LR.Simu</code> et
+<code>LR.Affic</code> mais ne surtout pas chercher à comprendre les
+implantations de ces deux derniers paquetages.</p>
+<h2 id="principe-de-la-synchronisation">Principe de la
+synchronisation</h2>
+<p>Comme présenté en cours, deux approches sont possibles :</p>
+<ol type="1">
+<li><p>L’approche <em>automate</em> où l’on définit une tâche de
+synchronisation avec un état interne qui détermine quelles entrées sont
+ouvertes. L’interface (= les entrées) et leur implantation dépendent de
+la stratégie implantée. L’objectif des procédures
+<code>Demander_*</code> et <code>Terminer_*</code> est de masquer cette
+interface fluctuante pour les tâches définies dans
+<code>LR.Tasks</code>.</p></li>
+<li><p>L’approche <em>conditions d’acceptation</em> (ou
+<em>service</em>) où l’on définit une tâche dont chaque entrée est
+ouverte ou pas selon une condition d’acceptation qui assure le maintien
+d’un état correct. La démarche de conception est similaire à celle des
+moniteurs, notamment pour déterminer les variables d’état nécessaires au
+codage des conditions d’acceptation.</p></li>
+</ol>
+<h2 id="à-faire">À Faire</h2>
+<ol type="1">
+<li><p>Écrire dans <code>lr-synchro-basique.adb</code> une version
+basique autorisant plusieurs lecteurs simultanés. Ne pas se préoccuper
+d’implanter une stratégie particulière. Pour cela, utiliser un automate
+fini à états déterminant les entrées ouvertes dans chaque état (approche
+1).</p></li>
+<li><p>Écrire une version avec des conditions d’acceptation (approche
+2).</p></li>
+<li><p>Modifier les versions précédentes pour implanter une stratégie de
+type priorité aux rédacteurs.</p></li>
+<li><p>Déterminer un automate pour une stratégie équitable, i.e. qui
+garantit l’absence de famine des lecteurs et des rédacteurs, et
+implanter cette stratégie.</p></li>
+<li><p>Implanter une stratégie FIFO.</p></li>
+</ol>
+<h2 id="pour-ajouter-une-nouvelle-stratégie">Pour ajouter une nouvelle
+stratégie</h2>
+<p>Soit la stratégie <code>Toto</code> que l’on souhaite implanter :</p>
+<ul>
+<li><p>Pour créer <code>lr-synchro-toto.ads</code> et
+<code>lr-synchro-toto.adb</code>, exécuter (on peut aussi dupliquer
+<code>lr-synchro-exclusion.ads</code> et
+<code>lr-synchro-exclusion.adb</code> et les éditer) :</p>
+<pre><code>  mkstrategie Toto</code></pre></li>
+<li><p>Dans <code>lr-synchro.adb</code>, remplacer
+<code>LR.Synchro.Exclusion</code> par <code>LR.Synchro.Toto</code>
+(emplacements marqués par XXXX)</p></li>
+<li><p>Écrire l’implantation du paquetage <code>LR.Synchro.Toto</code>
+dans le fichier <code>lr-synchro-toto.adb</code></p></li>
+</ul>
+<h2 id="pour-compiler">Pour compiler</h2>
+<p><code>make</code> ou <code>gprbuild build.gpr</code></p>
+<h2 id="pour-exécuter">Pour exécuter</h2>
+<pre><code>./lr-main 5 4    (nb lecteurs, nb rédacteurs)</code></pre>
+<h2 id="rappel-tâches-ada">Rappel tâches Ada</h2>
+<ul>
+<li>Pour une entrée de rendez-vous <code>Rdv</code>,
+<code>Rdv'count</code> est le nombre de tâches clientes en attente de
+l’acceptation du rendez-vous.</li>
+</ul>
+</body>
+</html>

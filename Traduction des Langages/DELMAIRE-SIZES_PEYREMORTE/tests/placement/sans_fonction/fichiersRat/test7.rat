@@ -1,0 +1,13 @@
+main {
+    bool x = true;
+    rat y = [0/1];
+    int z = 0;
+    while x {
+       bool x = true;
+       rat y = [0/1];
+       int z = 0;
+    } 
+    bool x1 = true;
+    rat y1 = [0/1];
+    int z1 = 0;
+}

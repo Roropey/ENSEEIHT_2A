@@ -1,0 +1,4 @@
+test{
+  rat x = [3/4];
+  bool y = x;
+}

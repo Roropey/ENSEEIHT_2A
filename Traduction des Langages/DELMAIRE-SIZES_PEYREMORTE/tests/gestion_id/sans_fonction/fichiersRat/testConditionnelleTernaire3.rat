@@ -1,0 +1,5 @@
+test{
+  int x = 1;
+  bool b = true;
+  print( (b=false) ? 1 : 2 );
+}

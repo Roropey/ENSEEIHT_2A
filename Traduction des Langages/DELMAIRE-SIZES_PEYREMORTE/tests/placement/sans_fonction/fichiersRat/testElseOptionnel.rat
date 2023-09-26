@@ -1,0 +1,8 @@
+main {
+    bool x = true;
+    rat y = [0/1];
+    if x {
+       bool x = true;
+       rat y = [0/1];
+    }
+}

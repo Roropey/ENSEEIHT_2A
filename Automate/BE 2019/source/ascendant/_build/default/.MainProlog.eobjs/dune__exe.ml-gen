@@ -1,0 +1,10 @@
+(** @canonical Dune__exe.Lexer *)
+module Lexer = Dune__exe__Lexer
+
+
+(** @canonical Dune__exe.MainProlog *)
+module MainProlog = Dune__exe__MainProlog
+
+
+(** @canonical Dune__exe.Parser *)
+module Parser = Dune__exe__Parser

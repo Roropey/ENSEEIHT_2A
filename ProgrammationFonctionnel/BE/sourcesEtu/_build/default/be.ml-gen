@@ -1,0 +1,6 @@
+(** @canonical Be.Conway *)
+module Conway = Be__Conway
+
+
+(** @canonical Be.Expression *)
+module Expression = Be__Expression

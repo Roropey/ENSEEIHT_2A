@@ -1,0 +1,7 @@
+int f (int a){
+  return a;
+}
+
+test{
+  print call f ((3+4));
+}

@@ -1,0 +1,11 @@
+int add (int a int a){
+  return (a+2);
+ }
+ 
+int add2 (int a int b ){
+  return (a+b);
+ }
+
+test{
+  int x = 3;
+}

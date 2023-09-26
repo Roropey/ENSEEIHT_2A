@@ -1,0 +1,8 @@
+int add (int a int b){
+  return (a+b);
+ }
+
+test{
+  const x = 3;
+  int z = (x+1);
+}

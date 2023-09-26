@@ -1,0 +1,14 @@
+main{
+    int h = 0;
+    heure : loop {
+        if (h=24){ break heure;}
+        print h;
+        h = (h+1);
+    }
+    h = 0 ;
+    heure : loop {
+        if (h=24){ break heure;}
+        print h;
+        h = (h+1);
+    }
+}

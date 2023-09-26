@@ -1,0 +1,16 @@
+int add (int a int b){
+  return (a+b);
+ }
+ 
+int add2 (int a int b ){
+  return (a+b);
+ }
+
+test{
+  int x = 3;
+  if (x < 3){
+    rat x = [4/2];
+  }else{
+    rat x = [1/3];
+  }
+}

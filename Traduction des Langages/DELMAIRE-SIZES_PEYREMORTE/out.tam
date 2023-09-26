@@ -1,0 +1,198 @@
+; tests/gestion_id/avec_fonction/fichiersRat/testCombinaisonsConstructions.rat
+JUMP main
+
+pgcd
+LOADL 0
+LOAD (1) -2[LB]
+LOAD (1) -1[LB]
+boucle
+LOAD (1) 5[LB]
+JUMPIF (0) fin
+LOAD (1) 4[LB]
+LOAD (1) 5 [LB]
+SUBR IMod
+STORE (1) 3[LB]
+LOAD (1) 5[LB]
+STORE (1) 4[LB]
+LOAD (1) 3[LB]
+STORE(1) 5[LB]
+JUMP boucle
+fin
+LOAD (1) 4[LB]
+RETURN (1) 2
+
+norm
+LOAD (1) -2[LB]
+LOAD (1) -1[LB]
+CALL (LB) pgcd
+LOAD (1) -2[LB]
+LOAD (1) 3[LB]
+SUBR IDiv
+LOAD (1) -1[LB]
+LOAD (1) 3[LB]
+SUBR IDiv
+RETURN (2) 2
+
+ROut
+LOADL '['
+SUBR COut
+LOAD (1) -2[LB]
+SUBR IOut
+LOADL '/'
+SUBR COut
+LOAD (1) -1[LB]
+SUBR IOut
+LOADL ']'
+SUBR COut
+RETURN (0) 2
+
+RAdd
+LOAD (1) -4[LB]
+LOAD (1) -1[LB]
+SUBR IMul
+LOAD (1) -2[LB]
+LOAD (1) -3[LB]
+SUBR IMul
+SUBR IAdd
+LOAD (1) -3[LB]
+LOAD (1) -1[LB]
+SUBR IMul
+CALL (ST) norm
+RETURN (2) 4
+
+RMul
+LOAD (1) -4[LB]
+LOAD (1) -2[LB]
+SUBR IMul
+LOAD (1) -3[LB]
+LOAD (1) -1[LB]
+SUBR IMul
+CALL (ST) norm
+RETURN (2) 4
+
+valeur
+LOAD (1) -3[LB]
+JUMPIF (0) label7
+
+LOAD (1) -2[LB]
+JUMP label8
+
+label7
+LOAD (1) -1[LB]
+label8
+RETURN (1) 3
+POP (0) 0
+HALT
+permute
+PUSH 1
+LOAD (1) -2[LB]
+LOADI (1)
+STORE (1) 3[LB]
+LOAD (1) -1[LB]
+LOADI (1)
+LOAD (1) -2[LB]
+STOREI (1)
+LOAD (1) 3[LB]
+LOAD (1) -1[LB]
+STOREI (1)
+LOADL 0
+RETURN (1) 2
+POP (0) 1
+HALT
+main
+PUSH 1
+LOADL 0
+STORE (1) 0[SB]
+PUSH 1
+LOADL 1
+STORE (1) 1[SB]
+PUSH 1
+LOADL 0
+STORE (1) 2[SB]
+PUSH 1
+LOADL 1
+STORE (1) 3[SB]
+loop3start
+PUSH 1
+LOAD (1) 3[SB]
+LOADA 0[SB]
+LOADA 1[SB]
+CALL (ST) valeur
+STORE (1) 4[SB]
+LOAD (1) 4[SB]
+LOADI (1)
+SUBR IOut
+LOAD (1) 3[SB]
+LOADL 0
+SUBR IEq
+STORE (1) 3[SB]
+LOAD (1) 2[SB]
+LOADL 1
+SUBR IAdd
+STORE (1) 2[SB]
+LOAD (1) 2[SB]
+LOADL 10
+SUBR IEq
+JUMPIF (0) label9
+
+JUMP loop3end
+
+POP (0) 0
+JUMP label10
+
+label9
+POP (0) 0
+label10
+POP (0) 1
+JUMP loop3start
+loop3end
+LOADL 888
+SUBR IOut
+PUSH 1
+LOADL 1
+SUBR MALLOC
+STORE (1) 4[SB]
+LOADL 0
+LOAD (1) 4[SB]
+STOREI (1)
+PUSH 1
+LOADL 1
+SUBR MALLOC
+STORE (1) 5[SB]
+LOADL 1
+LOAD (1) 5[SB]
+STOREI (1)
+PUSH 1
+LOADL 0
+STORE (1) 6[SB]
+loop4start
+LOAD (1) 4[SB]
+LOADI (1)
+SUBR IOut
+PUSH 1
+LOAD (1) 4[SB]
+LOAD (1) 5[SB]
+CALL (ST) permute
+STORE (1) 7[SB]
+LOAD (1) 6[SB]
+LOADL 1
+SUBR IAdd
+STORE (1) 6[SB]
+LOAD (1) 6[SB]
+LOADL 10
+SUBR IEq
+JUMPIF (0) label11
+
+JUMP loop4end
+
+POP (0) 0
+JUMP label12
+
+label11
+POP (0) 0
+label12
+POP (0) 1
+JUMP loop4start
+loop4end
+POP (0) 7
+HALT

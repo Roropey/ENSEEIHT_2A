@@ -1,0 +1,6 @@
+test{
+    int * p = (new int);
+    rat x = [3/4];
+    p = &x; 
+    
+}

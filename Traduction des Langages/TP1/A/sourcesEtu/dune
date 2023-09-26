@@ -1,0 +1,11 @@
+(ocamllex lexer)
+
+;; A décommenter à partir de l'exercice 2
+;;(menhir
+;; (modules parser))
+
+(library
+ (name tp1)
+ (inline_tests)
+ (preprocess
+  (pps ppx_inline_test)))

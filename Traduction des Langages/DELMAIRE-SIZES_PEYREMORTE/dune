@@ -1,0 +1,11 @@
+(ocamllex lexer)
+
+(menhir
+ (modules parser))
+
+(library
+ (name rat)
+ (libraries unix)
+ (inline_tests)
+ (preprocess
+  (pps ppx_inline_test ppx_expect)))

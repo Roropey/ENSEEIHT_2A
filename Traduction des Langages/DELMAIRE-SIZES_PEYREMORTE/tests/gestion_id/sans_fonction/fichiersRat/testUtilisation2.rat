@@ -1,0 +1,8 @@
+test{
+  int x = 3;
+  if (x=3){
+    int y = x; 
+  }else{
+    int y = (x + 5);
+  }
+}

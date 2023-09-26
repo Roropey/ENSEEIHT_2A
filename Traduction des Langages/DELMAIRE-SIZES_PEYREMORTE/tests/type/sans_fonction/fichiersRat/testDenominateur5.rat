@@ -1,0 +1,3 @@
+test{
+  bool x = num [3/4];
+}

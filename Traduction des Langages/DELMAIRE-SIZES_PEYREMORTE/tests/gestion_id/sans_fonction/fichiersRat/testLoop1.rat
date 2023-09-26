@@ -1,0 +1,3 @@
+test{
+    loop { print 0; }
+}

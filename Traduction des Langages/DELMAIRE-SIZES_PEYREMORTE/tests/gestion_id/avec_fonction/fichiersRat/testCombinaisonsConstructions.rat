@@ -1,0 +1,39 @@
+(int *) valeur (bool p (int *) a (int *) b){
+    return (p ? a : b);
+}
+
+int permute (int* p1 int* p2)
+{
+int sauve = (*p1);
+(*p1) = (*p2);
+(*p2) = sauve;
+return 0;
+}
+
+prog {
+    int a = 0;
+    int b = 1;
+    int i = 0;
+    bool pair = true;
+    v1 : loop {
+        (int *) res = call valeur (pair &a &b);
+        print (* res);
+        pair = (pair = false);
+        i = (i+1);
+        if (i=10){break v1;}
+    }
+
+    print 888;
+
+    (int *) c = (new int);
+    (* c) = 0;
+    (int *) d = (new int);
+    (* d) = 1;
+    int j = 0;
+    loop {
+        print (* c);
+        int inutile = call permute (c d);
+        j = (j + 1);
+        if (j=10){break;}
+    }
+}

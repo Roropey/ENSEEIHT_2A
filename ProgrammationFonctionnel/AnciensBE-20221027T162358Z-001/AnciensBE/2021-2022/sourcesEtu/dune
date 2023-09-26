@@ -1,0 +1,10 @@
+(library
+ (name be)
+ (inline_tests)
+ (modules test util mem listmem assocmem btree treemem)
+ (preprocess
+  (pps ppx_inline_test)))
+(executable
+    (name bench)
+    (modules bench)
+    (libraries be))

@@ -1,0 +1,4 @@
+test{
+  rat z = [3/4];
+  int x = num z;
+}

@@ -1,0 +1,22 @@
+(** @canonical Dune__exe.Lex *)
+module Lex = Dune__exe__Lex
+
+
+(** @canonical Dune__exe.Main *)
+module Main = Dune__exe__Main
+
+
+(** @canonical Dune__exe.MainMonad *)
+module MainMonad = Dune__exe__MainMonad
+
+
+(** @canonical Dune__exe.Scanner *)
+module Scanner = Dune__exe__Scanner
+
+
+(** @canonical Dune__exe.Syntax *)
+module Syntax = Dune__exe__Syntax
+
+
+(** @canonical Dune__exe.SyntaxMonad *)
+module SyntaxMonad = Dune__exe__SyntaxMonad

@@ -1,0 +1,7 @@
+test{
+  int i = 0 ;
+  while (i <11){
+    if (denom [i/2] = 1){print i;}
+    i = (i+1);
+  }
+}

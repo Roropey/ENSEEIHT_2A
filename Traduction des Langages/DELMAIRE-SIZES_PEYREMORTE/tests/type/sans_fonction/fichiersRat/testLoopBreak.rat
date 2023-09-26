@@ -1,0 +1,7 @@
+main{
+    int x = 0;
+    loop {
+    print x;
+    if (x=10) {break;} else {x = (x+1);}
+    }
+}

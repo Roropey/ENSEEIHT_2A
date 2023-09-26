@@ -1,0 +1,9 @@
+int add (int x int y){
+  return (x+y);
+}
+
+test{
+    while x {
+     int y = 4;
+   } 
+}

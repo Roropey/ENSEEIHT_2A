@@ -1,0 +1,10 @@
+(** @canonical Dune__exe.LexerJava *)
+module LexerJava = Dune__exe__LexerJava
+
+
+(** @canonical Dune__exe.MainJava *)
+module MainJava = Dune__exe__MainJava
+
+
+(** @canonical Dune__exe.TokenJava *)
+module TokenJava = Dune__exe__TokenJava

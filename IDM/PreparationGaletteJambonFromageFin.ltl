@@ -1,0 +1,17 @@
+op wd_finished =  (MettreFarinePlat_finished ) /\  (CasserOeuf_finished ) /\  (AjoutLait_finished ) /\  (MelangerAvecFouet_finished ) /\  (LaisserReposer_finished ) /\  (MettrePoeleAChauffer_finished ) /\  (CuirePremiereFaceGalette_finished ) /\  (CouperJambon_finished ) /\  (CuireSecondeFaceGalette_finished ) /\  (MettreJambonSurGalette_finished ) /\  (MettreGruyere_finished ) /\  (MettreLaGaletteDansLAssiette_finished ) /\  (DegusterGalette_finished ) /\  T;
+op wd_not_running = -( MettreFarinePlat_running \/  CasserOeuf_running \/  AjoutLait_running \/  MelangerAvecFouet_running \/  LaisserReposer_running \/  MettrePoeleAChauffer_running \/  CuirePremiereFaceGalette_running \/  CouperJambon_running \/  CuireSecondeFaceGalette_running \/  MettreJambonSurGalette_running \/  MettreGruyere_running \/  MettreLaGaletteDansLAssiette_running \/  DegusterGalette_running \/  F );
+[] ( dead <=> wd_finished );
+[] ( dead => wd_not_running);		
+[] ( dead => (FarineGramme_free = 1000));
+[] ( dead => (Oeufs_free = 6));
+[] ( dead => (LaitMiliLitre_free = 1000));
+[] ( dead => (GruyereRapeeGramme_free = 100));
+[] ( dead => (JambonTranche_free = 4));
+[] ( dead => (HuileMiliLitre_free = 1000));
+[] ( dead => (Louche_free = 1));
+[] ( dead => (Fouet_free = 1));
+[] ( dead => (PaireDeCiseaux_free = 1));
+[] ( dead => (Plat_free = 1));
+[] ( dead => (Poele_free = 1));
+[] ( dead => (Assiette_free = 1));
+

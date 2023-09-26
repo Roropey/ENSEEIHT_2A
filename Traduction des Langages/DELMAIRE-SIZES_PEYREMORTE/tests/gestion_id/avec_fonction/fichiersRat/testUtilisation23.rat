@@ -1,0 +1,11 @@
+int add (int x int y){
+  return (x+y);
+}
+
+test{
+   if x {
+     int y = 4;
+   } else {
+     int y = 5;
+   } 
+}
